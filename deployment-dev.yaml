@@ -11,7 +11,7 @@ spec:
     - ReadWriteMany
   nfs:
     path:  /srv/nfs/grimesdl         #local reference change this!!!!
-    server: 10.48.10.150
+    server: 10.48.10.140
   persistentVolumeReclaimPolicy: Retain
 ---
 apiVersion: v1
@@ -46,7 +46,7 @@ spec:
     spec:
       containers:
         - name: flask
-          image: cithit/roseaw:latest   #<------change this!!!!!
+          image: cithit/grimesdl:latest   #<------change this!!!!!
           ports:
             - containerPort: 5000
           volumeMounts:
